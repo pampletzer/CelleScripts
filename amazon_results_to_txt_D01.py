@@ -1,3 +1,6 @@
+# Written by Paul Ampletzer @ paul.ampletzer@gmail.com
+
+
 import pandas as pd
 import os
 import re
