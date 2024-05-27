@@ -1,3 +1,5 @@
+# Written by Paul Ampletzer @ paul.ampletzer@gmail.com
+
 from hashlib import new
 import re
 import glob
