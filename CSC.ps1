@@ -1,5 +1,5 @@
 ﻿### CSC Chat Schönheits Chirurg
-
+# Written by Paul Ampletzer @ paul.ampletzer@gmail.com
 
 # Displays a message to the user informing them that this tool creates a second version of their report,
 # where certain file system information is automatically hidden.
@@ -54,7 +54,7 @@ $htmllines = (Get-Content $htmlNew).length
 
 # Replaces the closing </body> tag at the end of the HTML file with a new, formatted HTML content
 #(Get-Content mytest.html).Replace('\<\/body\>', '<b>hier kommt die Nachricht!</b></body>') | Set-Content mytest.html
-(Get-Content $htmlNew) -replace '\<\/body\>', '<div style="text-align: center;color: #1eff4e;box-shadow: 0 0 10px #1eff4e, 0 0 30px #1eff4e, inset 0 0 10px #1eff4e,inset 0 0 30px #1eff4e;border-radius:  10px;padding:  20px 50 px;border: 4px solid #fff;background: black;margin: 28px; padding-bottom: 20px; padding-top: 20px;"><h2 style="text-align: center;"><b>Es handelt sich hierbei um eine automatisiert gek&uuml;rzte Version. <br /> Chatinhalte sollten unver&auml;ndert sein.</b></h2> <br /> <h3 style="text-align: center;">ggf. den Originalen Export konsultieren!</h3> <br /> <span>created by Ampletzer</span></div></body>' | Set-Content $htmlNew -Encoding utf8
+(Get-Content $htmlNew) -replace '\<\/body\>', '<div style="text-align: center;color: #1eff4e;box-shadow: 0 0 10px #1eff4e, 0 0 30px #1eff4e, inset 0 0 10px #1eff4e,inset 0 0 30px #1eff4e;border-radius:  10px;padding:  20px 50 px;border: 4px solid #fff;background: black;margin: 28px; padding-bottom: 20px; padding-top: 20px;"><h2 style="text-align: center;"><b>Es handelt sich hierbei um eine automatisiert gek&uuml;rzte Version. <br /> Chatinhalte sollten unver&auml;ndert sein.</b></h2> <br /> <h3 style="text-align: center;">ggf. den originalen Export konsultieren!</h3> <br /> <span>created by Ampletzer</span></div></body>' | Set-Content $htmlNew -Encoding utf8
 
 # Adds empty lines for better readability in the terminal
 Write-Host "
