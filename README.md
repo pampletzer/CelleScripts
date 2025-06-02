@@ -7,3 +7,4 @@ Collection of Scripts helping to deal with errors and problems that Celle. Tools
 + **gray_to_pa_passwordlist:** Gray*** created passwordlist need to be converted to be able to be used in Celle PA. No cleanup on no password but functional
 + **amazon_results_to_txt_D01.py** exporting D01 from "Body" from XLSX files 
 + **CSC** creates second html file without paths from chat exports from PA
++ **hash_conv_Analyzer_to_PA** converts Analyzer Files to md5 and SHA256 .txt for PA use
