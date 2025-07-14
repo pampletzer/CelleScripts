@@ -1,51 +1,57 @@
-Convert-to-MP3 Tool
-====================
+# 💬 SfS - Sprachnachrichten für Schreibprogramm
 
-Usage:
-1. Place your .m4a and/or .opus .mp4 audio files in the same folder as convert.exe
-2. Run convert.exe
-3. It will automatically convert all audio files to .amr using embedded ffmpeg.
+Dieses Tool konvertiert automatisch Audio-Dateien (M4A, MP4, Opus) in das AMR-Format (`.amr`), welches oft für bestimmte Telefonie- oder Diktieranwendungen benötigt wird. Es ist ideal, um Sprachnachrichten für die Nutzung in Schreibprogrammen oder spezifischer Software vorzubereiten. Das Tool ist eine kompilierte Anwendung (EXE), die **FFmpeg** intern verwendet, um die Konvertierungsaufgaben zu bewältigen. Es ist für eine einfache Drag-and-Drop- oder Verzeichnisverarbeitung konzipiert.
 
-Notes:
-- This tool includes ffmpeg.exe as an embedded resource.
-- No installation required.
-- Output files will appear in the same directory.
-- ffmpeg is extracted to %TEMP% and used from there.
+---
 
-Created using AutoHotkey.
+## ✨ Funktionen
 
-keine Sonderzeichen im Ordner
+* [cite_start]`🔄` **Automatisierte Konvertierung**: Wandelt `.m4a` [cite: 4][cite_start], `.mp4`  [cite_start]und `.opus`  [cite_start]Dateien in `.amr`  um.
+* [cite_start]`📦` **Selbstständig**: Beinhaltet `ffmpeg.exe` direkt in der ausführbaren Datei, sodass keine separate Installation von FFmpeg erforderlich ist.
+* [cite_start]`📁` **Verzeichnisbasiert**: Sucht und konvertiert automatisch alle unterstützten Dateien im selben Verzeichnis, in dem die Anwendung gestartet wird.
+* [cite_start]`🗜️` **Dateinamensäuberung**: Bereinigt Dateinamen von Sonderzeichen und Emoticons, um Probleme bei der Dateiverarbeitung zu vermeiden.
+* [cite_start]`✅` **Fehlermeldungen**: Zeigt bei fehlgeschlagenen Konvertierungen detaillierte Fehlermeldungen an.
+* [cite_start]`🚀` **Benachrichtigung**: Gibt eine Bestätigung aus, sobald eine Datei erfolgreich konvertiert wurde, und wenn alle Konvertierungen abgeschlossen sind.
 
-https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-2025-06-08-git-5fea5e3e11-essentials_build.7z <-FFMPEG
-in bin folder the ffmpeg.exe for compiling with autohotkey
+---
 
-AMR Quality is bad but hey - problem for another day
+## ⚙️ Voraussetzungen
 
-Snippet from the FAQ Page
-====================
+* **Betriebssystem**: Windows.
+* [cite_start]**Eingabedateien**: `.m4a`, `.mp4` oder `.opus`-Audiodateien, die konvertiert werden sollen.
 
-Folgende Audio-Formate können importiert werden:
+---
 
-Adaptive Multirate Codec(Dateiendung: .amr)
-Advanced Audio Coding (Dateiendungen: .aac, .3gp,.mp4, .m4a)
+## 🚀 Verwendung
 
-Die Diktate können durch Drag & Drop oder über den Befehl Importieren in der Menüleiste (Datei-> "Importieren") importiert werden. Dabei werden die Dateien in WAV-Dateien gewandelt und in "Eigene Diktate" abgelegt.
+1.  **Tool platzieren**:
+    * Legen Sie die `SfS.exe` (die Ihnen bereitgestellt wurde) in den **gleichen Ordner**, in dem sich auch Ihre zu konvertierenden Audio-Dateien (`.m4a`, `.mp4`, `.opus`) befinden.
 
-Hinweis:
+2.  **Tool ausführen**:
+    * Doppelklicken Sie einfach auf die `SfS.exe`-Datei.
 
-Zum Importieren von Dateien, die mit dem Advanced Audio Coding (AAC) Codec erstellt wurden, muss ein entsprechender Decoder auf Ihrem System vorhanden sein. Solch einen Codec erhalten Sie bspw. bei Nero (http://www.nero.com/eng/downloads-nerodigital-nero-aac-codec.php) unter Zustimmung der Lizenzvereinbarung. Dieser Codec muss vor der erstmaligen Verwendung einmalig installiert werden.
+3.  **Konvertierungsprozess**:
+    * [cite_start]Das Tool startet und beginnt automatisch, alle unterstützten Audio-Dateien im aktuellen Verzeichnis zu verarbeiten.
+    * [cite_start]Während der Konvertierung wird ein kleiner Hinweis (Tooltip) angezeigt, welche Datei gerade verarbeitet wird.
+    * [cite_start]Bei erfolgreicher Konvertierung wird eine `[OriginalDateiname].amr`-Datei im selben Ordner erstellt.
+    * [cite_start]Sollte eine Konvertierung fehlschlagen, wird eine Fehlermeldung mit Details zum Problem angezeigt.
 
-Gehen Sie dazu wie folgt vor:
+4.  **Abschluss**:
+    * [cite_start]Nachdem alle unterstützten Dateien im Ordner verarbeitet wurden, erscheint eine Meldung `Done converting all audio files.` 
+    * Drücken Sie `OK`, um das Tool zu beenden.
 
-1.    AAC Codec
-downloaden.
+---
 
-2.    Dateien auf dem
-Desktop entpacken.
+## ⚠️ Wichtige Hinweise
 
-3.    Den AAC-Decoder
-in das Verzeichnis C:\Dokumente und Einstellungen\Anwendungsdate\Grundig
-Business Systems\ kopieren.
+* [cite_start]**Dateiformat**: Das Tool ist spezifisch für die Konvertierung von `.m4a`, `.mp4` und `.opus` zu `.amr` ausgelegt. Andere Dateitypen werden ignoriert.
+* [cite_start]**Ausgabeort**: Die konvertierten `.amr`-Dateien werden im **selben Ordner** wie die Originaldateien und die `SfS.exe` abgelegt.
+* [cite_start]**FFmpeg-Extraktion**: Das Tool entpackt eine temporäre `ffmpeg.exe` in das temporäre Verzeichnis Ihres Systems. [cite_start]Diese temporäre Datei wird nach Beendigung des Tools wieder gelöscht.
 
-(Wenn sie den AAC Decoder von Nero verwenden, ist befindet sich die Decoder
-Datei (neroAacDec.exe) im Verzeichnis Win 32.)
+---
+
+## 👤 Autor
+
+* [cite_start]Paul Ampletzer - paul.ampletzer@gmail.com 
+
+---
